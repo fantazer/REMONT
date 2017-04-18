@@ -1,0 +1,26 @@
+mixin header()
+	//block header
+	.header
+		.header-top
+			.main-cont
+				.header-top-wraper
+					.header-logo 
+						img(src="img/logo.png", alt="")
+					.header-search
+						input(type="text" placeholder="Поиск")
+						.header-search-icon
+							+icon("magnifying-glass","icon") 
+					.header-contact
+						a(href="#").header-contact-phone 8(495)432-23-23
+						a(href="#").header-contact-mail mail@mail.com
+		.main-cont
+			.header-navigation 
+				a(href="#").header-navigation__el ремонт компьютерной техники
+				a(href="#").header-navigation__el ремонт ноутбуков
+				a(href="#").header-navigation__el ремонт apple
+				a(href="#").header-navigation__el востановление данных
+				a(href="#").header-navigation__el прайс-лист
+				a(href="#").header-navigation__el контакты
+				a(href="#").header-navigation__el о компании
+
+	//block header end
