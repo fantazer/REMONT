@@ -5,48 +5,152 @@
 	//border-bottom 1px solid #2a3649
 	background white 
 .header-top-wraper
+	+below(768px)
+		fw()
 	flex(between)
 	padding 20px 0
 .header-logo 
+	+below(768px)
+		width 100%
+		flex(mid)
 	font-weight 600
 	font-size 24px
 	img
+		+below(992px)
+			width 150px
+		+below(768px)
+			width 80%
+			margin 0 auto
 		width 300px
-//.header-contact 
+.header-contact 
+	+below(768px)
+		width 100%
 .header-contact-phone
+	+below(992px)
+		font-size 22px
+	+below(768px)
+		text-align center
 	color #324a5e
 	font-size 32px
 	font-weight bold
 	display block
 .header-contact-mail
+	+below(992px)
+		font-size 12px
+	+below(768px)
+		text-align center
 	font-size 16px
 	text-align right
 	display block
 	color #324a5e
 .header-navigation 
 	flex(between)
+	+below(992px)
+		display none
+	+below(768px)
+		fw()
+		position absolute
+		top  100% 
+		left 0
+		z-index 200
+		background #446b8c 
 .header-navigation__el 
-	up()
-	color white
-	padding 20px 0
-	text-align center
-	font-size 13px
-	tr(all)
-	&:hover
-		color yellow
-.header-search
+	+below(992px)
+		width 100%
 	position relative
-	width 30%
+	&:hover
+		.header-navigation__sub
+			display block
+		+below(992px)
+			.header-navigation__sub
+				display none
+	a
+		+below(992px)
+			width 100%
+		up()
+		tr(all)
+		color white
+		padding 20px 0
+		text-align center
+		font-size 13px
+		display inline-block
+		&:hover
+			color yellow 
+.header-search
+	+below(992px)
+		display none
+	position relative
+	width 33%
 	input
 		padding-left 5px 
 		border-bottom 1px solid #324a5e
 		br(0)
 		width 100% 
 .header-search-icon
+	+below(1200px)
+		margin-top -15px
 	position absolute
 	right 5px
 	top 50%
-	margin-top -15px
+	margin-top -25px
 	.icon
 		size 20px
-	
+.header-navigation__sub
+	+below(992px)
+		width 100%
+	position absolute
+	background #517a95
+	z-index 100  
+	width 100%
+	top 100%
+	left 0
+	display none
+	width 250px
+.header-navigation__sub-el
+	tr(all)
+	border-bottom 1px solid #558baf
+	&:hover
+		background darken(#517a95,10) 
+	a
+		+below(992px)
+			text-align center
+		padding 10px
+		text-align left
+		text-transform none
+		color white
+		&:hover
+			color white
+
+.header-navigation-caret
+	.icon
+		size 10px
+		fill white
+		margin-left 10px
+
+.header-contact-worktime
+	+below(1200px)
+		display none
+	text-align center
+	font-size 12px
+.header-navigation-toggle
+	padding 20px 
+	text-align right
+	+above(992px)
+		display none
+	.icon
+		cp()
+		fill white
+		size 20px
+		
+.header-navigation-wrap
+	+below(992px)
+		position relative
+		padding 0!important
+
+/*#my-menu
+	display none*/
+
+.kama_breadcrumbs
+	color #324a5e 
+	a
+		color #324a5e 

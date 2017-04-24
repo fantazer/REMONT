@@ -27,11 +27,11 @@ include ../module/**/*.jade
 	.main-wrap
 		.left-col
 			.get-order
-				form(action="")
-					input(type="text" placeholder="Ваш телефон")
-					input(type="text" placeholder="Ваше имя")
-					input(type="text" placeholder="Модель телефона")
-					a(href="#") Отправить
+				form(action="").validate-form
+					input(type="text" placeholder="Ваше имя" name="name")
+					input(type="text" placeholder="Ваш телефон" name="phone")
+					textarea(cols="30", rows="6" placeholder="Описание проблемы" name="comment")
+					input(type="submit" class="get-order-btn" value="Отправить")
 			.left-col__title Популярные услуги
 			.popular-service
 				a(href="#").popular-service__el  ремонт телефона

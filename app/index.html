@@ -12,6 +12,8 @@
 		<!--link(rel="stylesheet", href="bower/flexbox-grid-stylus/dist/flexbox-grid.min.css")-->
 		<!--link(rel="stylesheet", href="bower/components-font-awesome/css/font-awesome.css")-->
 		<link rel="stylesheet" href="bower/owl.carousel/dist/assets/owl.carousel.css" />
+		<link rel="stylesheet" href="bower/jQuery.mmenu/dist/jquery.mmenu.all.css" />
+		<link rel="stylesheet" href="bower/jQuery.mmenu/dist/extensions/effects/jquery.mmenu.effects.css" />
 		<!--endbuild-->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700|Open+Sans:400,700" />
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;amp;subset=cyrillic" />
@@ -29,10 +31,13 @@
 				<div class="main-cont">
 					<div class="header-top-wraper">
 						<div class="header-logo">
-							<img src="img/logo.png" alt="" />
+							<a href="/">
+								<img src="img/logo.png" alt="" />
+							</a>
 						</div>
 						<div class="header-search">
 							<input type="text" placeholder="Поиск" />
+							<div class="header-contact-worktime">По телефону с 9.00 до 23.00 Онлайн - круглосуточно. Без выходных. </div>
 							<div class="header-search-icon">
 								<svg class="icon">
 									<use xlink:href="#magnifying-glass"></use>
@@ -46,15 +51,59 @@
 					</div>
 				</div>
 			</div>
-			<div class="main-cont">
+			<div class="main-cont header-navigation-wrap">
+				<div class="header-navigation-toggle">
+					<a href="#my-menu" class="header-navigation-toggle__el">
+						<svg class="icon">
+							<use xlink:href="#menu"></use>
+						</svg>
+					</a>
+				</div>
 				<div class="header-navigation">
-					<a href="#" class="header-navigation__el">ремонт компьютерной техники</a>
-					<a href="#" class="header-navigation__el">ремонт ноутбуков</a>
-					<a href="#" class="header-navigation__el">ремонт apple</a>
-					<a href="#" class="header-navigation__el">востановление данных</a>
-					<a href="#" class="header-navigation__el">прайс-лист</a>
-					<a href="#" class="header-navigation__el">контакты</a>
-					<a href="#" class="header-navigation__el">о компании</a>
+					<div class="header-navigation__el">
+						<a href="#">ремонт компьютерной техники
+							<span class="header-navigation-caret">
+								<svg class="icon">
+									<use xlink:href="#arrow-down"></use>
+								</svg>
+							</span>
+						</a>
+						<div class="header-navigation__sub">
+							<div class="header-navigation__sub-el">
+								<a href="#">Восстановление данных с неисправного жесткого диска 0</a>
+							</div>
+							<div class="header-navigation__sub-el">
+								<a href="#">Восстановление данных с неисправного жесткого диска 1</a>
+							</div>
+							<div class="header-navigation__sub-el">
+								<a href="#">Восстановление данных с неисправного жесткого диска 2</a>
+							</div>
+							<div class="header-navigation__sub-el">
+								<a href="#">Восстановление данных с неисправного жесткого диска 3</a>
+							</div>
+							<div class="header-navigation__sub-el">
+								<a href="#">Восстановление данных с неисправного жесткого диска 4</a>
+							</div>
+							<div class="header-navigation__sub-el">
+								<a href="#">Восстановление данных с неисправного жесткого диска 5</a>
+							</div>
+						</div>
+					</div>
+					<div class="header-navigation__el">
+						<a href="#">ремонт ноутбуков</a>
+					</div>
+					<div class="header-navigation__el">
+						<a href="#">ремонт apple</a>
+					</div>
+					<div class="header-navigation__el">
+						<a href="#">востановление данных</a>
+					</div>
+					<div class="header-navigation__el">
+						<a href="#">прайс-лист</a>
+					</div>
+					<div class="header-navigation__el">
+						<a href="#">о компании</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -68,7 +117,7 @@
 						<div class="baner-el__text-wrap">
 							<div class="baner-el__text">Беспалтная диангностика</div>
 							<div class="baner-el__text">Беспалтная вызов мастера</div>
-							<div class="baner-el__text">Гарантия 1 год на работу</div>
+							<div class="baner-el__text">Гарантия 1 год</div>
 							<div class="baner-el__text">9 лет на рынке Санкт-Петербурга</div>
 						</div>
 					</div>
@@ -88,8 +137,8 @@
 										<use xlink:href="#icon-man"></use>
 									</svg>
 								</div>
-								<div class="section-trust-el-title">Наши сотрудники - опытные и надежные</div>
-								<div class="section-trust-el-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi debitis maxime delectus cupiditate laboriosam unde, suscipit libero doloribus obcaecati explicabo.</div>
+								<div class="section-trust-el-title">Опытные и надежные сотрудники</div>
+								<!--.section-trust-el-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi accusamus adipisci nobis vel optio, illo suscipit rerum, odit odio quia.-->
 							</div>
 							<div class="section-trust-el">
 								<div class="section-trust-el-icon">
@@ -97,8 +146,7 @@
 										<use xlink:href="#icon-fix"></use>
 									</svg>
 								</div>
-								<div class="section-trust-el-title">Быстрый ремонт сложно техники </div>
-								<div class="section-trust-el-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi debitis maxime delectus cupiditate laboriosam unde, suscipit libero doloribus obcaecati explicabo.</div>
+								<div class="section-trust-el-title">Быстрый ремонт техники </div>
 							</div>
 							<div class="section-trust-el">
 								<div class="section-trust-el-icon">
@@ -107,7 +155,6 @@
 									</svg>
 								</div>
 								<div class="section-trust-el-title">Только качественные комплектующие </div>
-								<div class="section-trust-el-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi debitis maxime delectus cupiditate laboriosam unde, suscipit libero doloribus obcaecati explicabo.</div>
 							</div>
 						</div>
 					</div>
@@ -137,7 +184,7 @@
 										</svg>
 									</div>
 									<div class="section-sheme-title">
-										<span>1.</span> Подача заявки по телефону</div>
+										<span>1.</span> Заявка по телефону или онлайн</div>
 									<div class="section-sheme-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, cum nostrum magnam aspernatur minima?</div>
 								</div>
 								<div class="section-sheme-el">
@@ -147,7 +194,7 @@
 										</svg>
 									</div>
 									<div class="section-sheme-title">
-										<span>2.</span> Консультация со специалистом</div>
+										<span>2.</span> Консультация, оформление заявки</div>
 									<div class="section-sheme-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor corporis dolore doloribus sequi perferendis.</div>
 								</div>
 							</div>
@@ -162,7 +209,7 @@
 										</svg>
 									</div>
 									<div class="section-sheme-title">
-										<span>3.</span> Диагностика техники</div>
+										<span>3.</span> Диагностика техники, согласование работ</div>
 									<div class="section-sheme-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi dolore facere, maxime officia repudiandae?</div>
 								</div>
 								<div class="section-sheme-el">
@@ -172,7 +219,7 @@
 										</svg>
 									</div>
 									<div class="section-sheme-title">
-										<span>4.</span> Подача заявки по телефону</div>
+										<span>4.</span> Оформление гарантийного талона</div>
 									<div class="section-sheme-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime illo velit excepturi laudantium, architecto.</div>
 								</div>
 							</div>
@@ -185,22 +232,64 @@
 					<div class="main-cont">
 						<div class="section-titile">Оставьте нам заявку</div>
 						<div class="section-titile-sub">Мы свяжемся с вами в ближайшее время</div>
-						<div class="section-form-wrap">
-							<div class="section-form-item">
-								<input type="text" placeholder="Ваше имя" />
-								<input type="text" placeholder="Ваш E-mail" />
-								<input type="text" placeholder="Номер телефона" />
+						<form action="" class="validate-form">
+							<div class="section-form-wrap">
+								<div class="section-form-content">
+									<div class="section-form-item">
+										<input type="text" placeholder="Ваше имя" name="name" />
+										<input type="text" placeholder="Ваш телефон" name="phone" />
+									</div>
+									<div class="section-form-text">
+										<textarea cols="30" rows="10" placeholder="Описание проблемы" name="comment"></textarea>
+									</div>
+								</div>
 							</div>
-						</div>
-						<div class="section-form-get">
-							<div class="btn btn--lg btn--green">Отправить заявку</div>
-						</div>
+							<div class="section-form-get">
+								<input type="submit" value="Отправить заявку" class="btn btn--lg btn--green" />
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>
 		</div>
 		<!--block footer-->
 		<div class="footer">
+			<nav id="my-menu">
+				<ul>
+					<li>
+						<a href="#">ремонт компьютерной техники
+							<span class="header-navigation-caret">
+								<svg class="icon">
+									<use xlink:href="#arrow-down"></use>
+								</svg>
+							</span>
+							<ul>
+								<li>
+									<a href="#">Восстановление данных с неисправного данных с неисправного</a>
+								</li>
+								<li>
+									<a href="#">Восстановление данных с неисправного данных с неисправного</a>
+								</li>
+								<li>
+									<a href="#">Восстановление данных с неисправного данных с неисправного</a>
+								</li>
+								<li>
+									<a href="#">Восстановление данных с неисправного данных с неисправного</a>
+								</li>
+								<li>
+									<a href="#">Восстановление данных с неисправного данных с неисправного</a>
+								</li>
+								<li>
+									<a href="#">Восстановление данных с неисправного данных с неисправного</a>
+								</li>
+							</ul>
+						</a>
+					</li>
+					<li>
+						<a href="#">Восстановление данных с неисправного </a>
+					</li>
+				</ul>
+			</nav>
 			<div class="main-cont">
 				<div class="footer-cont">
 					<div class="footer-link">
@@ -228,6 +317,15 @@
 					</div>
 				</div>
 			</div>
+			<!--modal-->
+			<div class="modal modal-true">
+				<div class="modal-wrap">
+					<svg class="icon">
+						<use xlink:href="#interface"></use>
+					</svg>
+					<div class="modal-true-text">Ваша заявка принята</div>
+				</div>
+			</div>
 		</div>
 		<!--block footer end-->
 		<!--build:js js/combined.js-->
@@ -235,6 +333,10 @@
 		<script src="bower/owl.carousel/dist/owl.carousel.min.js"></script>
 		<script src="bower/svg4everybody/dist/svg4everybody.js"></script>
 		<script src="js/jquery.smoothscroll.js"></script>
+		<script src="bower/jquery-touchswipe/jquery.touchSwipe.js"></script>
+		<script src="bower/jQuery.mmenu/dist/jquery.mmenu.all.min.js"></script>
+		<script src="bower/jquery-validation/dist/jquery.validate.min.js"></script>
+		<script src="bower/bPopup/jquery.bpopup.min.js"></script>
 		<!-- endbuild-->
 		<script src="js/script.js"></script>
 		<script src="js/script-edit.js"></script>

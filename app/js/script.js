@@ -1,5 +1,97 @@
 $(document).ready(function(){
 
+
+	//validate form
+	$('.validate-form').each(function() {   
+			var curentForm = $(this);
+	    $(this).validate({        
+			    	rules:{ //правила для полей 
+							name:{
+								required:true,
+							},
+							phone:{
+								required:true,
+								minlength:5,
+								number:true
+							},
+							comment:{
+								required:true,
+								minlength:5,
+							},
+						},
+						messages:{
+							name:{
+								required: 'Обязательное поле',
+							},
+							phone:{
+								required: 'Обязательное поле',
+								number:'Введите правильный номер',
+								minlength:'Номер должен быть длиннее',
+							},
+							comment:{
+								required: 'Обязательное поле',
+								minlength:'Сообщение должно быть длиннее',
+							},
+						},
+						submitHandler : function(form){ 
+							console.log('all good');
+						/*	$.ajax({ //отправка ajax
+							            type: "POST",
+							            //url: "/wp-content/themes/AAK/sender.php",
+							            url: "sender.php",
+							            data: $(form).serialize(),
+							            timeout: 3000,
+							          });*/
+								//$('.modal-close').click(); // автозакрытие окна
+								setTimeout(function(){
+											$('.modal-true').bPopup({
+												closeClass:'modal-close',
+													position:['auto','auto'], // position center
+													follow: [true,true],
+													autoClose: 2000
+											}); 
+											$(':input','.validate-form') 
+											  .not(':button, :submit, :reset, :hidden')
+											  .val('')
+											  .removeAttr('checked')
+											  .removeAttr('selected')
+								},1000)
+								
+					}
+			    });
+			});
+		
+	//validate form-end
+
+	$("#my-menu").mmenu({
+			navbar: {
+				title: "Главное меню",
+			},
+			extensions: [
+				//"effect-menu-slide", 
+				"effect-listitems-slide",
+				
+			], 
+			offCanvas : {
+				position : "left", // changing this alters the position of the menu
+				zposition : "front"
+			},
+		});
+		if ($(window).width() < 1025) {
+					$("body").swipe( {
+					        swipeRight:function() {
+					          $("#mobile-menu").data( "mmenu" ).open()
+					          console.log('swipeee')
+					        }
+				});
+
+			}
+
+      $(".header-navigation-toggle__el").click(function() {
+         $("#my-menu").data( "mmenu" ).open()
+      });
+
+
 	/* ###### For only ies  ######*/
 	//if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)){
 	//	//code
@@ -20,19 +112,19 @@ $(document).ready(function(){
 	/*svg4everybody();*/
 	
 	/* ###### For SlideToggle Elements  ######*/
-	/*var hideToggle = function(targetClick,toggleEl) {
+	var hideToggle = function(targetClick,toggleEl) {
 		$(targetClick).click(function(event){
 				event.stopPropagation();
 				$(toggleEl).slideToggle("fast");
 		});
 		$(toggleEl).on("click", function (event) {
 			event.stopPropagation();
+			console.log('click');
 		});
 		$(document).on("click", function () {
 				$(toggleEl).hide();
 		});
 	}
-	hideToggle('.icon-bars','.top-menu_link');*/
 
 
 	/* ###### init RangeSLider  ######*/

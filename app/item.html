@@ -12,6 +12,8 @@
 		<!--link(rel="stylesheet", href="bower/flexbox-grid-stylus/dist/flexbox-grid.min.css")-->
 		<!--link(rel="stylesheet", href="bower/components-font-awesome/css/font-awesome.css")-->
 		<link rel="stylesheet" href="bower/owl.carousel/dist/assets/owl.carousel.css" />
+		<link rel="stylesheet" href="bower/jQuery.mmenu/dist/jquery.mmenu.all.css" />
+		<link rel="stylesheet" href="bower/jQuery.mmenu/dist/extensions/effects/jquery.mmenu.effects.css" />
 		<!--endbuild-->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700|Open+Sans:400,700" />
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;amp;subset=cyrillic" />
@@ -29,10 +31,13 @@
 				<div class="main-cont">
 					<div class="header-top-wraper">
 						<div class="header-logo">
-							<img src="img/logo.png" alt="" />
+							<a href="/">
+								<img src="img/logo.png" alt="" />
+							</a>
 						</div>
 						<div class="header-search">
 							<input type="text" placeholder="Поиск" />
+							<div class="header-contact-worktime">По телефону с 9.00 до 23.00 Онлайн - круглосуточно. Без выходных. </div>
 							<div class="header-search-icon">
 								<svg class="icon">
 									<use xlink:href="#magnifying-glass"></use>
@@ -46,15 +51,59 @@
 					</div>
 				</div>
 			</div>
-			<div class="main-cont">
+			<div class="main-cont header-navigation-wrap">
+				<div class="header-navigation-toggle">
+					<a href="#my-menu" class="header-navigation-toggle__el">
+						<svg class="icon">
+							<use xlink:href="#menu"></use>
+						</svg>
+					</a>
+				</div>
 				<div class="header-navigation">
-					<a href="#" class="header-navigation__el">ремонт компьютерной техники</a>
-					<a href="#" class="header-navigation__el">ремонт ноутбуков</a>
-					<a href="#" class="header-navigation__el">ремонт apple</a>
-					<a href="#" class="header-navigation__el">востановление данных</a>
-					<a href="#" class="header-navigation__el">прайс-лист</a>
-					<a href="#" class="header-navigation__el">контакты</a>
-					<a href="#" class="header-navigation__el">о компании</a>
+					<div class="header-navigation__el">
+						<a href="#">ремонт компьютерной техники
+							<span class="header-navigation-caret">
+								<svg class="icon">
+									<use xlink:href="#arrow-down"></use>
+								</svg>
+							</span>
+						</a>
+						<div class="header-navigation__sub">
+							<div class="header-navigation__sub-el">
+								<a href="#">Восстановление данных с неисправного жесткого диска 0</a>
+							</div>
+							<div class="header-navigation__sub-el">
+								<a href="#">Восстановление данных с неисправного жесткого диска 1</a>
+							</div>
+							<div class="header-navigation__sub-el">
+								<a href="#">Восстановление данных с неисправного жесткого диска 2</a>
+							</div>
+							<div class="header-navigation__sub-el">
+								<a href="#">Восстановление данных с неисправного жесткого диска 3</a>
+							</div>
+							<div class="header-navigation__sub-el">
+								<a href="#">Восстановление данных с неисправного жесткого диска 4</a>
+							</div>
+							<div class="header-navigation__sub-el">
+								<a href="#">Восстановление данных с неисправного жесткого диска 5</a>
+							</div>
+						</div>
+					</div>
+					<div class="header-navigation__el">
+						<a href="#">ремонт ноутбуков</a>
+					</div>
+					<div class="header-navigation__el">
+						<a href="#">ремонт apple</a>
+					</div>
+					<div class="header-navigation__el">
+						<a href="#">востановление данных</a>
+					</div>
+					<div class="header-navigation__el">
+						<a href="#">прайс-лист</a>
+					</div>
+					<div class="header-navigation__el">
+						<a href="#">о компании</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -90,11 +139,11 @@
 			<div class="main-wrap">
 				<div class="left-col">
 					<div class="get-order">
-						<form action="">
-							<input type="text" placeholder="Ваш телефон" />
-							<input type="text" placeholder="Ваше имя" />
-							<input type="text" placeholder="Модель телефона" />
-							<a href="#">Отправить</a>
+						<form action="" class="validate-form">
+							<input type="text" placeholder="Ваше имя" name="name" />
+							<input type="text" placeholder="Ваш телефон" name="phone" />
+							<textarea cols="30" rows="6" placeholder="Описание проблемы" name="comment"></textarea>
+							<input type="submit" value="Отправить" class="get-order-btn" />
 						</form>
 					</div>
 					<div class="left-col__title">Популярные услуги</div>
@@ -226,6 +275,42 @@
 		</div>
 		<!--block footer-->
 		<div class="footer">
+			<nav id="my-menu">
+				<ul>
+					<li>
+						<a href="#">ремонт компьютерной техники
+							<span class="header-navigation-caret">
+								<svg class="icon">
+									<use xlink:href="#arrow-down"></use>
+								</svg>
+							</span>
+							<ul>
+								<li>
+									<a href="#">Восстановление данных с неисправного данных с неисправного</a>
+								</li>
+								<li>
+									<a href="#">Восстановление данных с неисправного данных с неисправного</a>
+								</li>
+								<li>
+									<a href="#">Восстановление данных с неисправного данных с неисправного</a>
+								</li>
+								<li>
+									<a href="#">Восстановление данных с неисправного данных с неисправного</a>
+								</li>
+								<li>
+									<a href="#">Восстановление данных с неисправного данных с неисправного</a>
+								</li>
+								<li>
+									<a href="#">Восстановление данных с неисправного данных с неисправного</a>
+								</li>
+							</ul>
+						</a>
+					</li>
+					<li>
+						<a href="#">Восстановление данных с неисправного </a>
+					</li>
+				</ul>
+			</nav>
 			<div class="main-cont">
 				<div class="footer-cont">
 					<div class="footer-link">
@@ -253,6 +338,15 @@
 					</div>
 				</div>
 			</div>
+			<!--modal-->
+			<div class="modal modal-true">
+				<div class="modal-wrap">
+					<svg class="icon">
+						<use xlink:href="#interface"></use>
+					</svg>
+					<div class="modal-true-text">Ваша заявка принята</div>
+				</div>
+			</div>
 		</div>
 		<!--block footer end-->
 		<!--build:js js/combined.js-->
@@ -260,6 +354,10 @@
 		<script src="bower/owl.carousel/dist/owl.carousel.min.js"></script>
 		<script src="bower/svg4everybody/dist/svg4everybody.js"></script>
 		<script src="js/jquery.smoothscroll.js"></script>
+		<script src="bower/jquery-touchswipe/jquery.touchSwipe.js"></script>
+		<script src="bower/jQuery.mmenu/dist/jquery.mmenu.all.min.js"></script>
+		<script src="bower/jquery-validation/dist/jquery.validate.min.js"></script>
+		<script src="bower/bPopup/jquery.bpopup.min.js"></script>
 		<!-- endbuild-->
 		<script src="js/script.js"></script>
 		<script src="js/script-edit.js"></script>

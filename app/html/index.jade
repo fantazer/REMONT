@@ -10,7 +10,7 @@ include ../module/**/*.jade
 				.baner-el__text-wrap
 					.baner-el__text Беспалтная диангностика
 					.baner-el__text Беспалтная вызов мастера
-					.baner-el__text Гарантия 1 год на работу
+					.baner-el__text Гарантия 1 год
 					.baner-el__text 9 лет на рынке Санкт-Петербурга
 .main-wrap
 	.content
@@ -22,20 +22,17 @@ include ../module/**/*.jade
 					.section-trust-el
 						.section-trust-el-icon
 							+icon("icon-man","icon")
-						.section-trust-el-title Наши сотрудники - опытные и надежные
-						.section-trust-el-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi debitis maxime delectus cupiditate laboriosam unde, suscipit libero doloribus obcaecati explicabo.
-				
+						.section-trust-el-title Опытные и надежные сотрудники
+						//.section-trust-el-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi accusamus adipisci nobis vel optio, illo suscipit rerum, odit odio quia.
 					.section-trust-el
 						.section-trust-el-icon
 							+icon("icon-fix","icon")
-						.section-trust-el-title Быстрый ремонт сложно техники 
-						.section-trust-el-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi debitis maxime delectus cupiditate laboriosam unde, suscipit libero doloribus obcaecati explicabo.
+						.section-trust-el-title Быстрый ремонт техники 
 
 					.section-trust-el
 						.section-trust-el-icon
 							+icon("icon-true","icon")
 						.section-trust-el-title Только качественные комплектующие 
-						.section-trust-el-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi debitis maxime delectus cupiditate laboriosam unde, suscipit libero doloribus obcaecati explicabo.
 		
 		//section price
 		.section.section-price
@@ -58,12 +55,12 @@ include ../module/**/*.jade
 							.section-sheme-el
 								.section-sheme-icon
 									+icon("icon-order","icon")
-								.section-sheme-title <span>1.</span> Подача заявки по телефону
+								.section-sheme-title <span>1.</span> Заявка по телефону или онлайн
 								.section-sheme-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, cum nostrum magnam aspernatur minima?
 							.section-sheme-el
 								.section-sheme-icon
 									+icon("icon-spec","icon")
-								.section-sheme-title <span>2.</span> Консультация со специалистом
+								.section-sheme-title <span>2.</span> Консультация, оформление заявки
 								.section-sheme-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor corporis dolore doloribus sequi perferendis.
 						.section-sheme-img
 							img(src="img/phone.png", alt="")
@@ -71,12 +68,12 @@ include ../module/**/*.jade
 							.section-sheme-el
 								.section-sheme-icon
 									+icon("icon-diag","icon")
-								.section-sheme-title <span>3.</span> Диагностика техники
+								.section-sheme-title <span>3.</span> Диагностика техники, согласование работ
 								.section-sheme-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi dolore facere, maxime officia repudiandae?
 							.section-sheme-el
 								.section-sheme-icon
 									+icon("icon-garant","icon")
-								.section-sheme-title <span>4.</span> Подача заявки по телефону
+								.section-sheme-title <span>4.</span> Оформление гарантийного талона
 								.section-sheme-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime illo velit excepturi laudantium, architecto.
 
 		//section sheme
@@ -85,13 +82,16 @@ include ../module/**/*.jade
 			.main-cont
 				.section-titile Оставьте нам заявку
 				.section-titile-sub Мы свяжемся с вами в ближайшее время
-				.section-form-wrap
-					.section-form-item
-						input(type="text" placeholder="Ваше имя")
-						input(type="text" placeholder="Ваш E-mail")
-						input(type="text" placeholder="Номер телефона")
-				.section-form-get
-					.btn.btn--lg.btn--green Отправить заявку
+				form(action="").validate-form
+					.section-form-wrap
+						.section-form-content
+							.section-form-item
+								input(type="text" placeholder="Ваше имя" name="name")
+								input(type="text" placeholder="Ваш телефон" name="phone")
+							.section-form-text
+								textarea( cols="30", rows="10" placeholder="Описание проблемы" name="comment")
+					.section-form-get
+						input(type="submit" class="btn btn--lg btn--green" value="Отправить заявку") 
 
 			
 +footer()

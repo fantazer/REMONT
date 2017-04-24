@@ -1,26 +1,43 @@
 mixin header()
 	//block header
 	.header
+		
 		.header-top
 			.main-cont
 				.header-top-wraper
 					.header-logo 
-						img(src="img/logo.png", alt="")
+						a(href="/")
+							img(src="img/logo.png", alt="")
 					.header-search
 						input(type="text" placeholder="Поиск")
+						.header-contact-worktime По телефону с 9.00 до 23.00 Онлайн - круглосуточно. Без выходных. 
 						.header-search-icon
 							+icon("magnifying-glass","icon") 
 					.header-contact
 						a(href="#").header-contact-phone 8(495)432-23-23
 						a(href="#").header-contact-mail mail@mail.com
-		.main-cont
+		.main-cont.header-navigation-wrap
+			.header-navigation-toggle
+				a(href="#my-menu").header-navigation-toggle__el
+					+icon("menu","icon") 
 			.header-navigation 
-				a(href="#").header-navigation__el ремонт компьютерной техники
-				a(href="#").header-navigation__el ремонт ноутбуков
-				a(href="#").header-navigation__el ремонт apple
-				a(href="#").header-navigation__el востановление данных
-				a(href="#").header-navigation__el прайс-лист
-				a(href="#").header-navigation__el контакты
-				a(href="#").header-navigation__el о компании
-
+				.header-navigation__el 
+					a(href="#") ремонт компьютерной техники
+						span.header-navigation-caret
+							+icon("arrow-down","icon") 
+					.header-navigation__sub
+						- for (var i = 0; i < 6; i++)
+							.header-navigation__sub-el
+								a(href="#") Восстановление данных с неисправного жесткого диска #{i}
+				.header-navigation__el 
+					a(href="#") ремонт ноутбуков
+				.header-navigation__el 
+					a(href="#") ремонт apple
+				.header-navigation__el 
+					a(href="#") востановление данных
+				.header-navigation__el 
+					a(href="#") прайс-лист
+				.header-navigation__el 
+					a(href="#") о компании
+			
 	//block header end

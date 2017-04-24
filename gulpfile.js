@@ -435,8 +435,7 @@ gulp.task('build',function(){
 		'min:js',
 		'img',
 		'svg',
-		'make',
-		'zip'
+		'make'
 	)
 });
 
@@ -454,7 +453,6 @@ gulp.task('build:ftp',function(){
 		'img',
 		'svg',
 		'make',
-		'zip',
 		//'screenshot',
 		//'guide',
 		'ftp'

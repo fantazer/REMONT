@@ -6,6 +6,8 @@
 	flex(between)
 	align-items flex-start
 .footer-link
+	+below(768px)
+		display none
 	width 60%
 	columns 2
 .footer-link-el
@@ -15,15 +17,29 @@
 	display inline-block
 	position relative
 	padding-left 5px
+	tr(all)
+	&:hover
+		color yellow
+		&:before
+			content '>'
+			color yellow
 	&:before
 		content '>'
 		color #979ea5
-//.footer-contact
+		tr(all)
+.footer-contact
+	+below(768px)
+		width 100%
+		flex(mid)
+		fl()
+		fw()
 .footer-logo
 	width 200px
 	display block
 .footer-phone
 	a
+		+below(768px)
+			font-size 20px 
 		color white
 		font-size 44px
 		text-align right

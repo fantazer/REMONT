@@ -1,6 +1,18 @@
 mixin footer()
 	//block footer
 	.footer
+		nav#my-menu
+			ul
+				li
+					a(href="#") ремонт компьютерной техники
+						span.header-navigation-caret
+							+icon("arrow-down","icon") 
+						ul 
+							- for (var i = 0; i < 6; i++)
+								li
+									a(href="#") Восстановление данных с неисправного данных с неисправного
+				li
+					a(href="#") Восстановление данных с неисправного	
 		.main-cont
 			.footer-cont
 				.footer-link
@@ -21,6 +33,10 @@ mixin footer()
 						a(href="tel:8(495)432-23-23") 8(495)432-23-23
 					.footer-mail 
 						a(href="mailto:mail@mail.com") mail@mail.com
-
+		//modal
+		.modal.modal-true
+			.modal-wrap
+				+icon("interface","icon")
+				.modal-true-text Ваша заявка принята
 
 	//block footer end

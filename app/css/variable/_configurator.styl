@@ -1,15 +1,28 @@
 .baner
+	+below(768px)
+		height auto
 	width 100%
 	height 600px
 	margin-bottom 40px
+.baner-el-content
+	+below(768px)
+		padding 30px 0
 .baner-el
+	+below(1200px)
+		background-position -600px
 	bg-full()
+	f()
+	fl()
 	width 100%
 	height 100%
-	f()
 	justify-content center
-	fl()
+	+below(768px)
+		background #e6e5ea 
 .baner-el__title
+	+below(768px)
+		font-size 30px
+		line-height initial
+		text-align center 
 	up()
 	font-size 62px
 	line-height 52px
@@ -17,6 +30,9 @@
 	font-weight 600 
 	margin-bottom 20px
 .baner-el__text
+	+below(768px)
+		width 100%
+		text-align center
 	up()
 	padding 10px
 	margin-bottom 5px
@@ -30,13 +46,23 @@
 	fl()
 	align-items flex-start
 .main-wrap
+	+below(992px)
+		fw()
+		margin-top 30px
 	flex(between)
 	align-items flex-start
+	margin-top 50px
 .left-col
+	+below(992px)
+		width 100%
+		order 2
 	width 25%
 .content
 	width 100%
 .content-item
+	+below(992px)
+		width 100%
+		order 1
 	width 70%
 .left-col__title 
 	up()
@@ -52,10 +78,13 @@
 	position relative
 	display block
 	color #1e3e71
+	tr(all)
 	&:before
 		content '>'
 		position absolute
 		left 0px
+	&:hover
+		color yellow
 .popular-service
 	margin-bottom 50px
 .get-order
@@ -65,14 +94,20 @@
 	input
 		width 100%
 		margin-bottom 20px
-	a
-		text-align center
-		display block
-		padding 10px
-		color black
-		background yellow 
-		up()
-		font-weight 600  
+	textarea
+		width 100%
+.get-order-btn
+	up()
+	text-align center
+	display block
+	padding 10px
+	color black
+	background yellow 
+	font-weight 600 
+	tr(all)
+	&:hover
+		background darken(yellow,20) 
+		
 .get-news
 	margin-bottom 50px
 .get-news__el
@@ -84,33 +119,48 @@
 	bg-full()
 	height 60px
 .get-news__content
-	width 65%
+	width 100%
+	color black
 .get-news__title 
 	font-size 12px
 	font-weight 600
 	up() 
 .get-news__text  
-	font-size 10px
+	font-size 12px
 		
 //.section
-//.section-trust
-
+.section-trust
+	padding 40px 0
 .section-titile
+	+below(768px)
+		font-size 24px
 	text-align center
 	font-weight 600
 	font-size 44px
 .section-titile-sub
+	+below(768px)
+		margin-bottom 30px
 	text-align center
 	margin-bottom 70px
 .section-trust-wrap
 	flex(between)
+	align-items flex-start
+	+below(992px)
+		fw()
 .section-trust-el
+	+below(992px)
+		width 100%
+		margin-bottom 30px
 	width 30%
 	flex(mid)
 	fl()
 .section-trust-el-icon
+	f()
 	margin-bottom 20px
+	justify-content center 
 .section-trust-el-title
+	+below(768px)
+		width 100%
 	font-size 20px
 	font-weight 600
 	text-align center
@@ -121,12 +171,26 @@
 	
 	
 .section-price 
+	+below(992px)
+		fw()
 	f()
 	justify-content space-between
 .section-price-img 
+	+below(1378px)
+		background-position -680px 
+	+below(1200px)
+		background-position -880px 
+	+below(992px)
+		display none
 	width 50%
 	bg-full()
 .section-price-cont 
+	+below(992px)
+		width 100%
+		padding 20px
+		flex(mid)
+		fl()
+		fw()
 	width 50%
 	background gray-light 
 	padding 60px
@@ -148,21 +212,34 @@
 	font-size 22px
 	margin-bottom 30px
 .section-price-text 
+	+below(992px)
+		text-align center
+	+below(768px)
+		width 100%
 	width 60%
 	margin-bottom 30px
 .section-price-get 
+	+below(768px)
+		width 100%
+		text-align center
 	@extend .btn
 	@extend .btn--md
 	@extend .btn--green
 
 //.section-sheme
 //.section-titile
-//.section-titile-sub
+.section-titile-sub
+	+below(768px)
+		padding 0 20px
 .section-sheme-cont
+	+below(992px)
+		fw()
 	flex(between)
 //.main-cont
 .section-sheme-step
-	width 28%
+	+below(992px)
+		width 100%
+	width 40%
 .section-sheme-el
 	margin-bottom 30px
 .section-sheme-icon
@@ -179,22 +256,32 @@
 	up()
 	font-weight bold
 	margin-bottom 10px
+	font-size 14px
 	span
 		font-size 26px
-//.section-sheme-text
+.section-sheme-text
+	+below(992px)
+		text-align center!important
 .section-sheme-img
+	+below(992px)
+		display none
 	width 600px
 	flex(mid)
 .section-sheme-step--left
 	.section-sheme-el
+		+below(992px)
+			flex(mid)
 		f()
 		fl()
 		align-items flex-end
 	.section-sheme-text
 		text-align right
-
+	.section-sheme-title
+		text-align right
 .section-sheme-step--right
 	.section-sheme-el
+		+below(992px)
+			flex(mid)
 		f()
 		fl()
 		align-items flex-start
@@ -222,11 +309,29 @@
 	padding 0 0 40px 0
 	border-bottom 1px solid rgba(254, 254, 254, 0.38);
 	margin-bottom 40px 
-.section-form-item
-	flex(between)
-	input
-		width 30%
+	flex(mid)
+.section-form-text
+	position relative
+	textarea
+		width 100%
 		opacity .9
+.section-form-item
+	+below(768px)
+		fw()
+	flex(between)
+	position relative
+	input
+		+below(768px)
+			width 100%
+			margin-bottom 20px
+		width 48%
+		opacity .9
+.error
+	border 1px solid red!important
+label.error
+	display none!important
+.section-form-content
+	width 70%
 .section-form-get
 	flex(mid)
 .header-navigation__el--serch
@@ -239,9 +344,9 @@
 		size 20px
 
 .bread-crambs-wrap
-	padding 40px 0
-	margin-bottom 40px
-	background whitesmoke 
+	//padding 40px 0
+	margin-bottom 20px
+	//background whitesmoke 
 .bread-crambs
 	f()
 .bread-crambs-el
@@ -250,6 +355,9 @@
 	position relative
 	a
 		color black
+		tr(all)
+		&:hover
+			color yellow
 	&:after
 		content '/'
 		position absolute
@@ -263,3 +371,72 @@
 			display none
 		
 		
+.find
+	li
+		font-size 20px
+	a
+		color black
+		text-decoration underline
+
+.header-navigation-toggle__el
+	color white
+	f()
+	align-items center
+	span
+		display inline-block
+		margin-left 10px
+
+.modal
+	display none
+	background white
+	padding 30px 20px
+	br(4px) 
+	position relative
+	.icon-times
+		position absolute
+		top 10px
+		right 10px
+		font-size 22px
+		cp()
+
+.modal-true
+	background green
+	padding 4%
+.modal-wrap
+	flex(mid)
+	fl()
+	fw()
+	.icon
+		fill white
+		size 80px 
+		margin-bottom 20px
+.modal-true-text
+	text-align center
+	color white
+	font-size 20px
+	up()
+.wrap-links
+	flex(between)
+	fw()
+	margin-top 30px
+	a
+		+below(768px)
+			width 48%
+		width 24.5%
+		padding-right 5px
+		color black
+		font-size 13px
+.wrap-links-get
+	text-align center
+	cp()
+	.icon
+		size 10px
+		margin-left 10px
+.links-content
+	br(5px)
+	padding 10px 20px
+	border 1px solid #d6d6d6
+	margin-bottom 20px
+.block-links
+	display none
+	
