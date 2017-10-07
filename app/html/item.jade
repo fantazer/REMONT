@@ -32,6 +32,27 @@ include ../module/**/*.jade
 					input(type="text" placeholder="Ваш телефон" name="phone")
 					textarea(cols="30", rows="6" placeholder="Описание проблемы" name="comment")
 					input(type="submit" class="get-order-btn" value="Отправить")
+
+			.awards
+				.awards__el
+					.awards__el-icon
+						+icon("award-seach","icon")
+					.awards__el-text Бесплатная диагностика
+				.awards__el
+					.awards__el-icon
+						+icon("award-road","icon")
+					.awards__el-text Бесплатный вызов мастера
+				.awards__el
+					.awards__el-icon
+						+icon("award-garant","icon")
+					.awards__el-text Гарантия 1 год
+				.awards__el
+					.awards__el-icon
+						+icon("award-time","icon")
+					.awards__el-text 9 лет на рынке 
+
+			.sale-baner
+				img(src="img/sale.jpg", alt="")
 			.left-col__title Популярные услуги
 			.popular-service
 				a(href="#").popular-service__el  ремонт телефона
@@ -106,6 +127,8 @@ include ../module/**/*.jade
 			p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti blanditiis praesentium animi cumque nostrum ipsa debitis unde eaque, eligendi, repellat similique illum sapiente vero voluptas vitae, quidem reiciendis neque eius.
 			
 			
+
+
 
 
 					

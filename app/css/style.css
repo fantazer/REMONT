@@ -1300,6 +1300,10 @@ label.error {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
@@ -1336,6 +1340,30 @@ label.error {
 }
 .block-links {
   display: none;
+}
+.content-item img {
+  display: inline-block;
+}
+.alignleft {
+  float: left;
+  margin-right: 10px;
+}
+.alignright {
+  float: right;
+  margin-left: 10px;
+}
+.aligncenter {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.sale-baner {
+  margin-bottom: 40px;
+}
+@media only screen and (max-width: 768px) {
+  .sale-baner {
+    margin-bottom: 20px;
+  }
 }
 .col {
   -webkit-box-sizing: border-box;
@@ -2228,6 +2256,65 @@ body {
   .main-cont {
     width: 1200px;
   }
+}
+.awards {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 30px 20px;
+  background: #f9f9f9;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  margin-top: -20px;
+}
+.awards__el {
+  width: 45%;
+  margin-bottom: 10px;
+}
+.awards__el-icon {
+  height: 155px;
+  vertical-align: middle;
+  font-size: 0;
+  background: url("../img/chaplet.svg") no-repeat 50% 50%;
+  background-size: contain;
+  margin-bottom: 5px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media only screen and (max-width: 768px) {
+  .awards__el-icon {
+    height: 120px;
+  }
+}
+.awards__el-icon .icon {
+  width: 35px;
+  height: 35px;
+}
+.awards__el-text {
+  text-align: center;
+  font-weight: bold;
+  line-height: 1;
+  font-size: 14px;
+  font-weight: bold;
+  color: #4e4e4e;
 }
 .footer {
   margin-top: 40px;

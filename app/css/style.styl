@@ -34,5 +34,40 @@ body
 	
 .main-cont
 	center(1200px,10px)
+
+.awards
+	f()
+	fw()
+	justify-content space-between
+	padding 30px 20px
+	background #f9f9f9 
+	margin-bottom 20px
+	padding-top 20px
+	margin-top -20px
 	
+.awards__el
+	width 45%
+	margin-bottom 10px
+	
+.awards__el-icon
+	+below(768px)
+		height 120px
+	height: 155px;
+	vertical-align: middle;
+	font-size: 0;
+	background: url(../img/chaplet.svg) no-repeat 50% 50%;
+	background-size: contain;
+	margin-bottom: 5px;
+	flex(mid)
+	.icon
+		size 35px
+		
+
+.awards__el-text
+	text-align center
+	font-weight bold
+	line-height 1
+	font-size: 14px;
+	font-weight: bold;
+	color: #4e4e4e;
 @import "../module/**/*"
